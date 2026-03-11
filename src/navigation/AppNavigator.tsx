@@ -7,12 +7,13 @@ import LoginScreen from '../screens/auth/LoginScreen';
 import HomeSreen from '../screens/main/HomeSreen';
 import BottomNavigationScreen from './bottom/BottomNavigationScreen';
 import DrawerNavigationScreen from './drawer/DrawerNavigationScreen';
+import MaterialTopTabScreen from './toptab/MaterialTopTabScreen';
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="drawer-nav">
+      <Stack.Navigator initialRouteName="toptab-nav">
         <Stack.Screen name="splash" component={SplashScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="home" component={HomeSreen} />
@@ -30,6 +31,7 @@ export default function AppNavigator() {
             headerShown: false,
           }}
         />
+        <Stack.Screen name="toptab-nav" component={MaterialTopTabScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
